@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = true;
         }
-        if (Input.GetKey(KeyCode.W) && jump == true && jump2==true)
+        if ((Input.GetKey(KeyCode.W)  || Input.GetKey(KeyCode.UpArrow)) && jump == true && jump2==true)
         {
             Debug.Log("Working");
             rb.AddForce(force);
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             rb.transform.position = rb.transform.position + pos;
             ani.SetBool("Walk_R", true);
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         {
             ani.SetBool("Walk_R", false);
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             rb.transform.position = rb.transform.position - pos;
             ani.SetBool("Walk_L", true);

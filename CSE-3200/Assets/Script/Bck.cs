@@ -11,8 +11,9 @@ public class Bck : MonoBehaviour
     {
         bt.onClick.AddListener(Back);
     }
+    
     void Back()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Game2");
     }
 }

@@ -13,6 +13,6 @@ public class St : MonoBehaviour
     }
     void Next()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Game2");
     }
 }

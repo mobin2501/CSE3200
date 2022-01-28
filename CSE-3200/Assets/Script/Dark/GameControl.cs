@@ -10,11 +10,11 @@ public class GameControl : MonoBehaviour
     {
         if (rb.transform.position.y < -4f)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Scene2");
         }
         if (Input.GetKey(KeyCode.Escape))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Scene2");
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,4 +24,5 @@ public class GameControl : MonoBehaviour
             SceneManager.LoadScene("Game2");
         }
     }
+    
 }
